@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="historyViewModel"
+            type="com.example.iptv.ui.history.HistorySearchViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <RelativeLayout
+            android:id="@+id/rl_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_big">
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="@string/search_history"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageView
+                android:id="@+id/image_view_delete"
+                android:layout_width="@dimen/ic_delete_width"
+                android:layout_height="@dimen/ic_delete_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:onClick="@{()->historyViewModel.onClickDeleteHistory()}"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_11"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_history_program"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bottom"
+            type="com.example.iptv.ui.ProgramBottom" />
+
+        <variable
+            name="viewModel"
+            type="com.example.iptv.ui.program.ProgramViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.program.ProgramActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_program"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height_normal"
+            android:background="@color/colorPrimary"
+            app:contentInsetStart="@dimen/toolbar_margin_left">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_search_box"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_search_height"
+                    android:layout_marginLeft="@dimen/margin_little"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_program_search"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/edit_text_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/et_search_height"
+                        android:layout_alignParentLeft="true"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/program_search_et_hint"
+                        android:nextFocusLeft="@id/image_view_search"
+                        android:nextFocusRight="@id/image_view_search"
+                        android:nextFocusUp="@id/image_view_search"
+                        android:nextFocusDown="@id/image_view_search"
+                        android:paddingLeft="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_small"
+                        android:text="@={viewModel.editTextContent}"
+                        android:textColorHint="@color/text_et_hint"
+                        android:textSize="@dimen/text_size_small"
+                        app:addTextChangedListener="@{viewModel.searchTextWatcher}"
+                        app:onFocusChangeListener="@{(view,hasFocus) -> viewModel.onFocusChange(view,hasFocus)}" />
+
+                    <ImageView
+                        android:id="@+id/image_view_search"
+                        android:layout_width="15dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_little"
+                        android:onClick="@{()->viewModel.onClickSearch()}"
+                        android:src="@drawable/ic_search" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/text_view_favorite_program"
+                        android:layout_width="@dimen/program_iv_favorite_program_width"
+                        android:layout_height="@dimen/program_iv_favorite_program_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_big"
+                        android:background="@drawable/ic_fav"
+                        android:onClick="@{(v)->viewModel.onClickFavorite(v)}" />
+
+                    <com.example.iptv.utils.RobotoMediumTextView
+                        android:id="@+id/text_view_cancel"
+                        android:layout_width="@dimen/search_btn_width"
+                        android:layout_height="@dimen/search_btn_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_smaller"
+                        android:layout_marginRight="@dimen/margin_little"
+                        android:background="@drawable/button_cancel"
+                        android:gravity="center"
+                        android:onClick="@{()->viewModel.onClickCancel()}"
+                        android:text="@string/search_cancel"
+                        android:textColor="@color/text_title_white"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_program"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_huge" />
+
+
+        <FrameLayout
+            android:id="@+id/fram_layout_history_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_program" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_height_normal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/menu_bc_dark"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/bottom1"
+                layout="@layout/program_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <include
+                android:id="@+id/bottom2"
+                layout="@layout/program_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

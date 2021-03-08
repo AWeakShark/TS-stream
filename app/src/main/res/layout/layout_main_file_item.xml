@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="file"
+            type="String" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height_normal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_file"
+            android:layout_width="@dimen/ic_file_width"
+            android:layout_height="@dimen/ic_file_height"
+            android:layout_marginLeft="@dimen/margin_little"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/ic_file" />
+
+        <com.example.iptv.utils.RobotoMediumTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_file"
+            android:text="@{file}"
+            android:textColor="@color/text_file_name"
+            android:textSize="@dimen/text_size_small" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_right"
+            android:layout_width="@dimen/ic_arrow_width"
+            android:layout_height="@dimen/ic_arrow_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_big"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+</layout>

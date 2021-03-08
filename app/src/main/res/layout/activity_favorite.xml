@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="favorite"
+            type="com.example.iptv.ui.favorite.FavoriteViewModel" />
+
+        <variable
+            name="titleBar"
+            type="com.example.iptv.ui.TitleBar" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/activity_favorite_toolbar"
+            layout="@layout/layout_title_bar_common"
+            bind:titleBar="@{titleBar}"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_favorite_program_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_below="@id/activity_favorite_toolbar"/>
+
+    </RelativeLayout>
+</layout>

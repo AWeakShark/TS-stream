@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="colorPrimary">#6200EE</color>-->
+    <color name="colorPrimary">#D42020</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="text_title_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="text_file_name">#1c1a1a</color>
+    <color name="text_et_hint">#991c1a1a</color>
+    <color name="menu_bc_dark">#1c1a1a</color>
+    <color name="program_menu_text_live">#fefefe</color>
+    <color name="program_menu_text_about">#4dffffff</color>
+    <color name="program_info_text">#1c1a1a</color>
+    <color name="program_info_text_time">#8c8a8a</color>
+    <color name="search_history">#e6e6e6</color>
+    <color name="search_text">#403d3d</color>
+    <color name="about_text">#403d3d</color>
+    <color name="dialog_bc">#303035</color>
+    <color name="about_line">#8c8a8a</color>
+    <color name="status_bar">#B82A2A</color>
+
+</resources>

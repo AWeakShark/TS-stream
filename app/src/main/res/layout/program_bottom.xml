@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="bottom"
+            type="com.example.iptv.ui.ProgramBottom" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view_program_bottom"
+            android:layout_width="@dimen/program_iv_icon_live_width"
+            android:layout_height="@dimen/program_iv_icon_live_height"
+            android:layout_centerHorizontal="true"
+            android:src="@{bottom.getIvBottom}"
+            android:onClick="@{(v)->bottom.run(v)}"
+            />
+
+        <com.example.iptv.utils.RobotoRegularTextView
+            android:id="@+id/text_view_program_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_program_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:text="@{bottom.getTvBottom}"
+            android:textColor="@color/program_menu_text_live"
+            android:textSize="@dimen/text_size_program_menu"
+            />
+    </RelativeLayout>
+</layout>

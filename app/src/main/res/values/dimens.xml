@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="toolbar_height_normal">45dp</dimen>
+    <dimen name="toolbar_margin_left">0dp</dimen>
+
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_big">26sp</dimen>
+
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_program_menu">12sp</dimen>
+
+    <dimen name="padding_small">10dp</dimen>
+
+    <dimen name="margin_micro">3dp</dimen>
+    <dimen name="margin_little">8dp</dimen>
+    <dimen name="margin_smaller">9dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="margin_large">26dp</dimen>
+    <dimen name="margin_huge">56dp</dimen>
+    <dimen name="margin_super_big">73dp</dimen>
+
+
+    <dimen name="menu_height_normal">56dp</dimen>
+    <dimen name="list_height_normal">56dp</dimen>
+    <dimen name="ic_file_height">20dp</dimen>
+    <dimen name="ic_file_width">24dp</dimen>
+    <dimen name="ic_arrow_width">9dp</dimen>
+    <dimen name="ic_arrow_height">16dp</dimen>
+    <dimen name="et_search_height">32dp</dimen>
+    <dimen name="program_iv_favorite_program_width">22dp</dimen>
+    <dimen name="program_iv_favorite_program_height">20dp</dimen>
+    <dimen name="program_iv_icon_live_width">26dp</dimen>
+    <dimen name="program_iv_icon_live_height">22dp</dimen>
+    <dimen name="program_iv_icon_about_width">24dp</dimen>
+    <dimen name="program_iv_icon_about_height">24dp</dimen>
+    <dimen name="search_btn_width">69dp</dimen>
+    <dimen name="search_btn_height">28dp</dimen>
+    <dimen name="ic_logo_size">213dp</dimen>
+    <dimen name="line_height">0.5dp</dimen>
+    <dimen name="dialog_height">117dp</dimen>
+    <dimen name="dialog_width">216dp</dimen>
+    <dimen name="ic_search_width">21dp</dimen>
+    <dimen name="ic_search_height">21dp</dimen>
+    <dimen name="ic_loading_width">48dp</dimen>
+    <dimen name="ic_loading_height">48dp</dimen>
+    <dimen name="ic_delete_height">23dp</dimen>
+    <dimen name="ic_delete_width">20dp</dimen>
+    <dimen name="search_history_text_height">33dp</dimen>
+    <dimen name="search_history_t_height">33dp</dimen>
+
+</resources>

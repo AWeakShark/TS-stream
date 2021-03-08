@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="program"
+            type="com.example.iptv.ts.epginfo.ProgramInfoDisplay" />
+    </data>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height=  "@dimen/list_height_normal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.example.iptv.utils.RobotoMediumTextView
+            android:id="@+id/text_view_program_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{program.getmProgramNumber}"
+            android:textColor="@color/program_info_text"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.example.iptv.utils.RobotoMediumTextView
+            android:id="@+id/text_view_program_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/text_view_program_number"
+            android:text="@{program.getmServiceName}"
+            android:textColor="@color/program_info_text"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.example.iptv.utils.RobotoRegularTextView
+            android:id="@+id/text_view_program_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_program_name"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/text_view_program_number"
+            android:text="@{program.time}"
+            android:textColor="@color/program_info_text_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.example.iptv.utils.RobotoRegularTextView
+            android:id="@+id/text_view_program_epg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_program_name"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/text_view_program_time"
+            android:text="@{program.eventText}" />
+
+    </RelativeLayout>
+
+</RelativeLayout></layout>

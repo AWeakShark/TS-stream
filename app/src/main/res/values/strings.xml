@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IPTV</string>
+    <string name="select_file">Select TS File</string>
+    <string name="program_search_et_hint">Please input Channel Num</string>
+    <string name="program_live">Live</string>
+    <string name="program_about">About</string>
+    <string name="search_cancel">Cancel</string>
+    <string name="search_history">Search History</string>
+    <string name="about_ftv">F·TV</string>
+    <string name="about_app">About APP</string>
+    <string name="about_check_update">Check Update</string>
+    <string name="waiting">Waiting</string>
+    <string name="about">About</string>
+    <string name="Favorite">Favorite</string>
+    <string name="if_favored">It is already favored</string>
+    <string name="favored">favored</string>
+</resources>
